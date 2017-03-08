@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Explorer - PARENT</title>
+
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/customStyle.css">
+
+	<script type="text/javascript">window.$ = window.jQuery = require( './js/jquery.min.js');</script>
+	<script src="./js/tether.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/socket.io.js"></script>
+	<script src="./js/customScript.js"></script>
+	
+	<!-- <script type="text/javascript" src="./../server/server.js"></script> -->
+	<script type="text/javascript">
+		const path = require("path");
+		var wSS = path.resolve( __dirname , '../server/server.js' );
+		const spawn = require("child_process").spawn;
+		var node = spawn( "node" , [ wSS ] , {  } );
+		console.log(node);
+		console.log(node.pid);
+	</script>
+
+</head>
+<body>
+
+	<h1>Testing Home Page</h1>
+
+</body>
+</html>
